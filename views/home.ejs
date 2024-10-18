@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome @ <%= username %></h1>
+        <a href="/new_twitt" style="text-decoration: none;">
+        <button>New Twitt ?</button>
+        </a>
+        <div class="twittbox">
+            <h2>All Tweets:</h2>
+            <% twitt_list.forEach(function(twitt) { %>
+                <p><span class="username">@<%= twitt.username %></span></p>
+                <p><%= twitt.twitt %></p>
+                <p><%= twitt.created_at %></p> <!-- Looping through the twitt_list -->
+            <% }); %>
+        </div>
+        <a href="javascript:void(0);" onclick="confirmSignOut()">Sign Out</a>
+    </div>
+
+    <script>
+        function confirmSignOut() {
+            // Show confirmation dialog
+            const confirmed = confirm("Are you sure you want to sign out?");
+            if (confirmed) {
+                // If the user confirmed, redirect to the sign-out route
+                window.location.href = "/signout";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* public/login.css */
+
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+.container {
+    max-width: 400px; /* Maximum width for the container */
+    margin: 100px auto; /* Center the container vertically and horizontally */
+    padding: 20px; /* Padding inside the container */
+    border: 1px solid #ccc; /* Border around the container */
+    background-color: #fff; /* White background for the container */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #555; /* Slightly lighter color for labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space below the input */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+button {
+    width: 100%; /* Full width for the button */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size for the button text */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+a {
+    display: block; /* Block display for links */
+    text-align: center; /* Center the link */
+    margin-top: 15px; /* Space above the link */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

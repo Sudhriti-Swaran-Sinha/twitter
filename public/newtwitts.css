@@ -1,0 +1,45 @@
+/* public/new_twitt.css */
+
+body {
+    background-color: #f9f9f9; /* Light background */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+.container {
+    max-width: 600px; /* Container width */
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    border: 1px solid #ccc; /* Border style */
+    background-color: #fff; /* White background for the container */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+}
+
+/* Targeting the textarea */
+textarea {
+    width: 790px; /* Set width to 790px */
+    height: 270px; /* Set height to 270px */
+    padding: 10px; /* Padding inside textarea */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    resize: none; /* Prevent resizing */
+}
+
+button {
+    display: block; /* Button as block element */
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Cursor style */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
