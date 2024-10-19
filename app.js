@@ -80,6 +80,20 @@ app.post("/create", (req,res) => {
     }
 })
 
+
+
+app.get("/signup", (req,res) => {
+   res.render("sign_up.ejs")
+})
+
+app.post("/signup", (req,res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    console.log(name,email,phone)
+});
+
+
 app.get("/signout", (req,res) => {
     req.session.destroy((err) => {
         if (err) {
