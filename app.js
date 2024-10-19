@@ -23,9 +23,21 @@ db.serialize(() => {
         twitt TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )`);
+
+    db.run(`CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        email TEXT,
+        phone TEXT,
+        random_number INTEGER
+    )`);
 })
 
 let twitt_list = []
+
+function generateRandomNumber() {
+    return Math.floor(10000 + Math.random() * 90000); // Generates a number between 10000 and 99999
+}
 
 app.get("/", (req, res) => {
     res.render('login')
@@ -86,11 +98,24 @@ app.get("/signup", (req,res) => {
    res.render("sign_up.ejs")
 })
 
+
 app.post("/signup", (req,res) => {
     const name = req.body.name;
     const email = req.body.email;
     const phone = req.body.phone;
-    console.log(name,email,phone)
+    const randomNumber = generateRandomNumber();
+
+
+    db.run(`INSERT INTO users (name, email, phone, random_number) VALUES (?, ?, ?, ?)`,
+        [name, email, phone, randomNumber], (err) => {
+            if (err) {
+                console.error(err.message);
+                res.send("Error during sign up");
+            } else {
+                res.render("number_popup.ejs", { randomNumber: randomNumber });
+            }
+        });
+    console.log(randomNumber)
 });
 
 
